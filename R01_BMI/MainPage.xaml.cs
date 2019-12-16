@@ -13,9 +13,24 @@ namespace R01_BMI
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+
+        int CM, KG, BMI;
+
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            CM = int.Parse(cm.Text) / 100;
+            KG = int.Parse(kg.Text);
+
+            BMI = KG / (CM * CM);
+
+            bmi.Text = BMI.ToString();
+            rsl.Text = "計算結果";
+
         }
     }
 }
