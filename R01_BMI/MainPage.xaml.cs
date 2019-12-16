@@ -29,7 +29,6 @@ namespace R01_BMI
             BMI = Math.Round(KG / (CM * CM));
 
             bmi.Text = BMI.ToString();
-            rsl.Text = "計算結果";
 
         }
     }
