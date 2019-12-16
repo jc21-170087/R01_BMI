@@ -14,7 +14,7 @@ namespace R01_BMI
     public partial class MainPage : ContentPage
     {
 
-        int CM, KG, BMI;
+        double CM, KG, BMI;
 
         public MainPage()
         {
@@ -23,10 +23,10 @@ namespace R01_BMI
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            CM = int.Parse(cm.Text) / 100;
-            KG = int.Parse(kg.Text);
+            CM = double.Parse(cm.Text) / 100;
+            KG = double.Parse(kg.Text);
 
-            BMI = KG / (CM * CM);
+            BMI = Math.Round(KG / (CM * CM));
 
             bmi.Text = BMI.ToString();
             rsl.Text = "計算結果";
